@@ -1,0 +1,205 @@
+/* 
+    Created on : Feb 1, 2018, 8:40:09 PM
+    Author     : Mohamed Al Moelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+
+@import 'icons/style.css';
+
+
+div[data-fbuilder]
+{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction:column;
+    box-sizing: border-box;
+}
+
+.fbuilder-builder
+{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fbuilder-container
+{
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left:0;
+    margin-right: 0;
+    
+    .delete
+    {
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+            i
+            {
+               color: #ccc;
+               &:hover
+               {
+                color: darken(#ccc, 50%);       
+               }
+
+            }
+    }
+
+    
+    .content 
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column;
+        box-sizing: border-box;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 0px;
+        padding-bottom: 20px;
+
+
+        .header
+        {
+            i
+            {
+                font-size: 20px;
+            }
+        }
+
+        .body
+        {        
+          text-overflow: ellipsis;  
+        }
+    }    
+
+}
+
+
+.fwindow-warpper
+{
+   width: 100vw;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.7);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0;
+    box-sizing: border-box;
+   
+   .fwindow {
+       min-width: 50%;
+       max-width: 100%;
+       min-height: 50%;
+       max-height: 100%;
+       background: #fff;
+       margin: 0;
+       box-sizing: border-box;
+       border-radius: 5px;
+       
+       .fwindow-header {
+          min-height: 20px;
+          width: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          font-weight: bold;
+          font-size: 20px;
+       }
+       .fwindow-body {
+           padding: 10px;
+           overflow-y: scroll;
+           box-sizing: border-box;
+           
+           .fwindow-group
+           {
+               width: 100%;
+               box-sizing: border-box;
+               padding-top: 20px;
+               label
+               {
+                  width: 100%; 
+                  box-sizing: border-box;
+                  padding-bottom: 8px;
+                  font-size: 15px;
+               }
+               .fwindow-control
+               {
+                   width: 100%;
+                   box-sizing: border-box;
+                   border: #ccc 1px solid;
+                   font-size: 15px;
+                   border-radius: 5px;
+               }
+           }
+           
+           .fwindow-select-elm
+           {
+               padding: 10px;
+               font-size: 16px;
+               width: 100%;
+               cursor: pointer;
+               border-bottom: dashed 1px #ccc;
+               color: #000;
+               &:hover
+               {
+                   background-color: #ccc;
+               }
+           }
+           
+       }
+       .fwindow-footer {
+          min-height: 20px;
+          width: 100%;
+          padding: 10px;
+          text-align: right;
+          box-sizing: border-box;
+       }
+   }
+}
+
+
+.fbuilder-new 
+{
+   width: 100%;
+   min-height: 30px;
+   border: dashed 1px #ccc;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10px;
+   cursor: pointer;
+   color: #ccc;
+   text-decoration: none;
+   margin-top: 10px;
+   box-sizing: border-box;
+   &:hover
+       {
+        border-color: darken(#ccc, 50%);
+        color: darken(#ccc, 50%);       
+       }
+}
+
+
+.fbuilder-log
+{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+
+
+
+
