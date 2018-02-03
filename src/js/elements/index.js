@@ -8,5 +8,6 @@
 import {html} from './fbuilder.html.js';
 import {form} from './fbuilder.form.js';
 import {crousel} from './fbuilder.crousel.js';
+import {text} from './fbuilder.text.js';
 
-export {html, form, crousel};
+export {html, form, crousel,text};

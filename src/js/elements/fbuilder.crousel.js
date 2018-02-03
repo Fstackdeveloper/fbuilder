@@ -1,5 +1,7 @@
 
 import {elements} from './fbuilder.elements.js';
+import {crouselWindow} from '../fwindow/fwindow.crousel.js';
+
 
 export class crousel extends elements{
     
@@ -14,23 +16,29 @@ export class crousel extends elements{
     
     init()
     {
-        this.element.type="html";
+        this.element.type="crousel";
         this.element.header="Edit Header";
         this.element.content="Edit Content";
-        this.icon = crousel.icon;
-        this.title = crousel.title;
+        this.element.icon = crousel.icon;
+        this.element.title = crousel.title;
     }
+        
     
-    model()
+    click() 
     {
-        return `
-            <div class='fbuilder-component-html'>
-                <div class="fbuilder-component-header">
-                    <input type="text" />
-                </div>
-            </div>
-    `;
+        
+        
+        var self = this;
+        var startWindow = new crouselWindow(this.fbuilder, {controls:this.element} );
+        startWindow.submitCompelete = function (controls) {
+            $.extend(self.element, controls);
+            self.element.$.find('.content').html(self.insertContent());
+        };
+        
+        
+        
     }
+
     
     
     

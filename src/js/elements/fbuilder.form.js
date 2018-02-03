@@ -1,5 +1,7 @@
 
 import {elements} from './fbuilder.elements.js';
+import {formWindow} from '../fwindow/fwindow.form.js';
+
 
 export class form extends elements{
     
@@ -14,24 +16,30 @@ export class form extends elements{
     
     init()
     {
-        this.element.type="html";
+        this.element.type="form";
         this.element.header="Edit Header";
         this.element.content="Edit Content";
-        this.icon = form.icon;
-        this.title = form.title;
+        this.element.icon = form.icon;
+        this.element.title = form.title;
     }
     
-    model()
+
+        
+    click() 
     {
-        return `
-            <div class='fbuilder-component-html'>
-                <div class="fbuilder-component-header">
-                    <input type="text" />
-                </div>
-            </div>
-    `;
+        
+        
+        var self = this;
+        var startWindow = new formWindow(this.fbuilder, {controls:this.element} );
+        startWindow.submitCompelete = function (controls) {
+            $.extend(self.element, controls);
+            self.element.$.find('.content').html(self.insertContent());
+        };
+        
+        
+        
     }
-    
+
     
     
     

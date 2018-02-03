@@ -10,12 +10,16 @@ and open the template in the editor.
         <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=no" />
 <link rel="stylesheet"  href="dist/css/fbuilder.css">
-                
-                <style>
-                    
-                    
-                </style>
-                    
+
+
+<!-- Include CSS for icons. -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<!-- Include Editor style. -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+
+                                  
 
     </head>
     <body>
@@ -24,7 +28,7 @@ and open the template in the editor.
         
         <div style="max-width:500px;padding: 20px;">
         
-        <div data-fbuilder>    
+        <div data-fbuilder data-ajax="http://localhost:3000">    
 
 
         </div>
@@ -49,6 +53,11 @@ and open the template in the editor.
   src="https://code.jquery.com/jquery-2.2.4.js"
   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
   crossorigin="anonymous"></script>
+  
+<!-- Include Editor JS files. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1//js/froala_editor.pkgd.min.js"></script>
+
+
 <script src="dist/js/fbuilder.js"></script>        
 
     </body>

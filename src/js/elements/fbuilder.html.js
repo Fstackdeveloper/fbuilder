@@ -22,22 +22,11 @@ export class html extends elements{
         this.element.type="html";
         this.element.header="Edit Header";
         this.element.content="Edit Content";
-        this.icon = html.icon;
-        this.title = html.title;
+        this.element.icon = html.icon;
+        this.element.title = html.title;
 
     }
-    
-    model()
-    {
-        return `
-            <div class='fbuilder-component-html'>
-                <div class="fbuilder-component-header">
-                    <input type="text" />
-                </div>
-            </div>
-    `;
-    }
-    
+        
     
     
     

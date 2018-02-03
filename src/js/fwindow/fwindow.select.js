@@ -46,10 +46,10 @@ export class select extends fwindow{
             if (elements.hasOwnProperty(key))
             {
                 this.windowElm.find("[data-" + key + "]").on('click', function(ev){
-                         let instanse = new elements[key](self.fbuilder,self.fitems);
+                         let instanse = new elements[key](self.fbuilder);
                          instanse.insert();
                          self.fbuilder.items.push(instanse.element);
-                         console.log(self.fbuilder.items);
+                         self.fbuilder.save();
                          self.windowElm.remove();
                 });            
             }

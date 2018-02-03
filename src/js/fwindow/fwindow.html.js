@@ -29,9 +29,7 @@ export class htmlWindow extends fwindow{
     
     events()
     {
-        var self = this;
-        
-        
+        var self = this;        
     }
     
     

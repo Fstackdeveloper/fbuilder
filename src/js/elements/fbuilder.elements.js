@@ -10,17 +10,16 @@ import {uniqId} from '../fbuilder.functions.js';
 export class elements {
     element = {};
     fbuilder;
-    icon;
-    title;
     static title; 
     static icon;
 
   
-    constructor(fbuilder)
+    constructor(fbuilder, element)
         {
           this.fbuilder = fbuilder;
           this.element.id = uniqId();
           this.init();   
+          $.extend(this.element, element);
         }
         
         
@@ -28,7 +27,7 @@ export class elements {
     {
         return `
                  <div class='header' >
-                    <i class="${this.icon}"></i> ${this.title}
+                    <i class="${this.element.icon}"></i> ${this.element.title}
                 </div>
                  <div class='body' >
                         ${this.element.header}
@@ -84,6 +83,13 @@ export class elements {
     onDelete()
     {
         let self = this;
+        this.element.$.find('.delete i').on('mousedown', function(ev) {
+            ev.stopPropagation();
+        });
+       this.element.$.find('.delete i').on('mouseup', function(ev) {
+            ev.stopPropagation();
+        });
+
         this.element.$.find('.delete i').on('click', function(ev) {
             ev.stopPropagation();
             
@@ -93,6 +99,7 @@ export class elements {
             });
                               
             self.element.$.remove();
+            self.fbuilder.save();
         });
         
     }

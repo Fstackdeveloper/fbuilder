@@ -128,6 +128,7 @@ export class fwindow {
             });
             self.submitCompelete(self.controls);
             self.windowElm.remove();
+            self.fbuilder.save();
         });
     }
     
