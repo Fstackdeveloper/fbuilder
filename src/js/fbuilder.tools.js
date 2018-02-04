@@ -19,14 +19,15 @@ export default class tools {
         {
           this.fbuilder = fbuilder;
           this.fitems = fitems;
-          this.fbuilder.append(this.builder());
+        //  this.fbuilder.append(this.builder());
+           fbuilder.builder = $( this.builder() ).insertBefore( this.fbuilder);
           this.clickWindow();
         }
         
     clickWindow() {
         
         var self = this;
-         $('.fbuilder-new').on('click', function(e) {
+         this.fbuilder.builder.find('.fbuilder-new').on('click', function(e) {
              new select(self.fbuilder,self.fitems);
          });
         
@@ -34,39 +35,17 @@ export default class tools {
     }
         
             
-    toolwindow()
-    {
-       return `
-        <div class='fwindow-warpper'>
-            <div class='fwindow'>
-            
-            <div class="fwindow-header">
-            </div>
-            
-            
-            <div class="fwindow-body">
-            </div>
-            
-            <div class="fwindow-footer">
-            <button data-close >cancel</button>
-            <button data-save >save</button>
-            </div>
-            </div>
-        </div>
-        `;
-
-    }
-    
-    
     
     builder()
     {
          return `
+         <div class="fbuilder">
             <div class='fbuilder-builder'>
             </div>
             <div class='fbuilder-new'>
             Element
             </div>
+          </div>
             `;
     }
      

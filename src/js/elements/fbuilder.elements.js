@@ -48,7 +48,7 @@ export class elements {
             </div>
             </div>
             `;
-     this.element.$ =  $(html).appendTo(this.fbuilder.find('.fbuilder-builder'));
+     this.element.$ =  $(html).appendTo(this.fbuilder.builder.find('.fbuilder-builder'));
      this. onClick();
      this.onDelete();
     }

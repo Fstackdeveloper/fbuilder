@@ -15,15 +15,24 @@ export class readJson {
         
         start()
         {
-          self =this;
-          this.ajax.get('/')          
-          .then(function (response) {
-              self.fbuilder.items = response.data || [];
-              self. build();
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
+            self =this;
+            if(this.fbuilder.data('auto') === true )
+            {
+              this.ajax.get('/')          
+              .then(function (response) {
+                  self.fbuilder.items = response.data || [];
+                  self. build();
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
+            }
+            else if (this.fbuilder.prop("tagName") === 'TEXTAREA')
+            {
+                this.fbuilder.items = (this.fbuilder.val() && this.fbuilder.val().trim() !=='')?JSON.parse(this.fbuilder.val().trim()):[];
+                this.build();
+                
+            }
 
         }
         

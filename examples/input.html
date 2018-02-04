@@ -9,7 +9,7 @@ and open the template in the editor.
         <title>Fbuilder</title>
         <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=no" />
-<link rel="stylesheet"  href="dist/css/fbuilder.css">
+<link rel="stylesheet"  href="../dist/css/fbuilder.css">
 
 
 <!-- Include CSS for icons. -->
@@ -26,12 +26,11 @@ and open the template in the editor.
 
         <!-- Menu -->
         
-        <div style="max-width:500px;padding: 20px;" >
+        <div style="max-width:500px;padding: 20px;">
         
-        <div data-fbuilder data-ajax="http://localhost:3000" data-auto="true">    
-
-
-        </div>
+            <textarea data-fbuilder data-ajax="http://localhost:3000" name="test">
+                [{"id":1517731098581,"type":"text","header":"test 1","content":"<p>Edit Content</p>","showheader":"0","icon":"icon-html","title":"Text"},{"id":1517731097064,"type":"html","header":"Edit Header","content":"Edit Content","showheader":"1","icon":"icon-html","title":"HTML"},{"id":1517731101042,"type":"form","header":"Edit Header","showheader":"1","icon":"icon-form","title":"form"},{"id":1517731550134,"type":"text","header":"Edit Header","content":"Edit Content","showheader":"1","icon":"icon-html","title":"Text"},{"id":1517731552234,"type":"form","header":"Edit Header","showheader":"1","icon":"icon-form","title":"form"}]
+            </textarea>
             
         </div>
         
@@ -58,7 +57,7 @@ and open the template in the editor.
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1//js/froala_editor.pkgd.min.js"></script>
 
 
-<script src="dist/js/fbuilder.js"></script>        
+<script src="../dist/js/fbuilder.js"></script>        
 
     </body>
 </html>

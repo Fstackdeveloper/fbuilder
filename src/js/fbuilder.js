@@ -17,6 +17,8 @@ import axios from 'axios';
 (function ( $ ) {
 
 $.fn.fbuilder = function() {
+    
+    $(this).hide();
         
     var fbuilderID = uniqId();
     
@@ -27,6 +29,8 @@ $.fn.fbuilder = function() {
         fbuilder.data('ajax', fbuilder.data('ajax') + '/');
     }
     
+    fbuilder.builder ={};
+    
     var ajax = axios.create({
       baseURL: fbuilder.data('ajax'),
       timeout: 1000
@@ -36,8 +40,6 @@ $.fn.fbuilder = function() {
     
     fbuilder.items = [];
     
-    
- new readJson(fbuilder, ajax);
 
 
     
@@ -55,25 +57,35 @@ $.fn.fbuilder = function() {
             }
         }
         
-
-        ajax.post('/save', {
-            build: build
-          })
-          .then(function (response) {
-           // console.log(response);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-
-
+        
+        if (this.prop("tagName") === 'TEXTAREA')
+        {
+            this.val(JSON.stringify(build));
+        }
+        
+        
+        if(this.data('auto') === true )
+        {
+            ajax.post('/save', {
+                build: build
+              })
+              .then(function (response) {
+               // console.log(response);
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
+        }
     };
 
     new tools(fbuilder);
     
+    new readJson(fbuilder, ajax);
+     
+    
     var i = 0;
 
-    var builderContainer = new Sortable($(this).find('.fbuilder-builder')[0], {group: "fbuilder_"+ fbuilderID, 
+    var builderContainer = new Sortable(fbuilder.builder.find('.fbuilder-builder')[0], {group: "fbuilder_"+ fbuilderID, 
     	// Element dragging ended
 	onEnd: function (evt) {
             
