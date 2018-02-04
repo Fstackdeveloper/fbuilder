@@ -18,12 +18,15 @@ export class formWindow extends fwindow{
        var html=` 
                     <div class="fwindow-group">
                          <label for="header">Header</label>
-                         <input class="fwindow-control" type="text" name="header" value="${this.controls.header}" >
+                         <input class="fwindow-control" type="text" name="header" value="${this.controls.header?this.controls.header:''}" placeholder="${this.controls.header_placeholder}" >
                      </div>
         
                      <div class="fwindow-group">
                          <label for="header">Type</label>
-                        <select class="fwindow-control" name="form">${formsSelect}</select>
+                        <select class="fwindow-control" name="form">
+                        <option> Select Form </option>
+                             ${formsSelect}
+                        </select>
                      </div>
         
         

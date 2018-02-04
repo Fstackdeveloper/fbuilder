@@ -20,8 +20,8 @@ export class html extends elements{
     init()
     {
         this.element.type="html";
-        this.element.header="Edit Header";
-        this.element.content="Edit Content";
+        this.element.header_placeholder="Write Title";
+        this.element.content_placeholder="Write Content";
         this.element.showheader = "1";
         this.element.icon = html.icon;
         this.element.title = html.title;

@@ -17,7 +17,7 @@ export class form extends elements{
     init()
     {
         this.element.type="form";
-        this.element.header="Edit Header";
+        this.element.header_placeholder="Write Title";
         this.element.showheader = "1";
         this.element.icon = form.icon;
         this.element.title = form.title;

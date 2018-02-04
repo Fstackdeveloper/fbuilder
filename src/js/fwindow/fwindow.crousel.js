@@ -29,18 +29,23 @@ export class crouselWindow extends fwindow{
        var html=` 
                     <div class="fwindow-group">
                          <label for="header">Header</label>
-                         <input class="fwindow-control" type="text" name="header" value="${this.controls.header}" >
+                         <input class="fwindow-control" type="text" name="header" value="${this.controls.header?this.controls.header:''}" placeholder="${this.controls.header_placeholder}" >
                      </div>
                        
                      <div class="fwindow-group">
                          <label for="header">Type</label>
-                        <select class="fwindow-control" name="fcrouseltype">${typesSelect}</select>
+                        <select class="fwindow-control" name="fcrouseltype">
+                        <option> Select Type </option>
+                        ${typesSelect}
+                        </select>
                      </div>
                      
                       
                       <div class="fwindow-group fwindow-group-category" ${(this.controls.fcrouseltype)? '':'style="display:none"'} >
                          <label for="header">Category</label>
-                        <select class="fwindow-control" name="category">${categorySelect}</select>
+                        <select class="fwindow-control" name="category">
+                        ${categorySelect}
+                        </select>
                      </div>
         
                      <div class="fwindow-group">

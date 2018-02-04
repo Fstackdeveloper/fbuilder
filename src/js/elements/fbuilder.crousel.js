@@ -17,7 +17,7 @@ export class crousel extends elements{
     init()
     {
         this.element.type="crousel";
-        this.element.header="Edit Header";
+        this.element.header_placeholder="Write Title";
         this.element.showheader = "1";
         this.element.icon = crousel.icon;
         this.element.title = crousel.title;

@@ -1,1 +1,169 @@
-@font-face{font-family:icomoon;src:url(/Users/mohamedalmoelef/NetBeansProjects/fbuilder/public_html/dist/media/30c02e8a87bdfe5fc51a1a123b2440c9.eot);src:url(/Users/mohamedalmoelef/NetBeansProjects/fbuilder/public_html/dist/media/30c02e8a87bdfe5fc51a1a123b2440c9.eot#iefix) format("embedded-opentype"),url(/Users/mohamedalmoelef/NetBeansProjects/fbuilder/public_html/dist/media/f0ad0c4228e7537106fbe3956857c190.ttf) format("truetype"),url(/Users/mohamedalmoelef/NetBeansProjects/fbuilder/public_html/dist/media/c03ab6fc370056849b674600738bd0c5.woff) format("woff"),url(/Users/mohamedalmoelef/NetBeansProjects/fbuilder/public_html/dist/media/8a614a12a22f3df79f7e3d3c511b1001.svg#icomoon) format("svg");font-weight:400;font-style:normal}[class*=" icon-"],[class^=icon-]{font-family:icomoon!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-crousel:before{content:"\E900"}.icon-form:before{content:"\E901"}.icon-close:before{content:"\EA0D"}.icon-html:before{content:"\EA80"}.fbuilder{padding:10px;display:flex;flex-direction:column}.fbuilder,.fbuilder-builder,.fbuilder-container{width:100%;box-sizing:border-box}.fbuilder-container{border:1px solid #ccc;margin:5px 0}.fbuilder-container .delete{width:100%;padding:5px 5px 0;margin:0;box-sizing:border-box}.fbuilder-container .delete i{color:#ccc}.fbuilder-container .delete i:hover{color:#4d4d4d}.fbuilder-container .content{width:100%;display:flex;justify-content:center;align-items:center;flex-direction:column;box-sizing:border-box;padding:0 5px 20px}.fbuilder-container .content .header i{font-size:20px}.fbuilder-container .content .body{text-overflow:ellipsis}.fwindow-warpper{width:100vw;height:100vh;position:fixed;top:0;left:0;background:rgba(0,0,0,.7);display:flex;justify-content:center;align-items:center;margin:0;box-sizing:border-box}.fwindow-warpper .fwindow{min-width:50%;max-width:100%;min-height:50%;max-height:100%;background:#fff;margin:0;box-sizing:border-box;border-radius:5px}.fwindow-warpper .fwindow .fwindow-header{min-height:20px;width:100%;padding:10px;box-sizing:border-box;font-weight:700;font-size:20px}.fwindow-warpper .fwindow .fwindow-body{padding:10px;overflow-y:scroll;box-sizing:border-box}.fwindow-warpper .fwindow .fwindow-body .fwindow-group{width:100%;box-sizing:border-box;padding-top:20px}.fwindow-warpper .fwindow .fwindow-body .fwindow-group label{width:100%;box-sizing:border-box;padding-bottom:8px;font-size:15px}.fwindow-warpper .fwindow .fwindow-body .fwindow-group .fwindow-control{width:100%;box-sizing:border-box;border:1px solid #ccc;font-size:15px;border-radius:5px}.fwindow-warpper .fwindow .fwindow-body .fwindow-select-elm{padding:10px;font-size:16px;width:100%;cursor:pointer;border-bottom:1px dashed #ccc;color:#000}.fwindow-warpper .fwindow .fwindow-body .fwindow-select-elm:hover{background-color:#ccc}.fwindow-warpper .fwindow .fwindow-footer{min-height:20px;width:100%;padding:10px;text-align:right;box-sizing:border-box}.fbuilder-new{width:100%;min-height:30px;border:1px dashed #ccc;display:flex;justify-content:center;align-items:center;padding:10px;cursor:pointer;color:#ccc;text-decoration:none;margin-top:10px;box-sizing:border-box}.fbuilder-new:hover{border-color:#4d4d4d;color:#4d4d4d}.fbuilder-log{width:100%;height:300px;overflow:hidden}
+/* 
+    Created on : Feb 1, 2018, 8:40:09 PM
+    Author     : Mohamed Al Moelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+@font-face {
+  font-family: 'icomoon';
+  src: url(/Users/mohamedalmoelef/NetBeansProjects/fbuilder/public_html/dist/media/30c02e8a87bdfe5fc51a1a123b2440c9.eot);
+  src: url(/Users/mohamedalmoelef/NetBeansProjects/fbuilder/public_html/dist/media/30c02e8a87bdfe5fc51a1a123b2440c9.eot#iefix) format("embedded-opentype"), url(/Users/mohamedalmoelef/NetBeansProjects/fbuilder/public_html/dist/media/f0ad0c4228e7537106fbe3956857c190.ttf) format("truetype"), url(/Users/mohamedalmoelef/NetBeansProjects/fbuilder/public_html/dist/media/c03ab6fc370056849b674600738bd0c5.woff) format("woff"), url(/Users/mohamedalmoelef/NetBeansProjects/fbuilder/public_html/dist/media/8a614a12a22f3df79f7e3d3c511b1001.svg#icomoon) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-crousel:before {
+  content: "\E900"; }
+
+.icon-form:before {
+  content: "\E901"; }
+
+.icon-close:before {
+  content: "\EA0D"; }
+
+.icon-html:before {
+  content: "\EA80"; }
+
+.fbuilder {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; }
+
+.fbuilder-builder {
+  width: 100%;
+  box-sizing: border-box; }
+
+.fbuilder-container {
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0;
+  margin-right: 0; }
+  .fbuilder-container .delete {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin: 0px;
+    box-sizing: border-box; }
+    .fbuilder-container .delete i {
+      color: #ccc; }
+      .fbuilder-container .delete i:hover {
+        color: #4d4d4d; }
+  .fbuilder-container .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 20px; }
+    .fbuilder-container .content .header i {
+      font-size: 20px; }
+    .fbuilder-container .content .body {
+      text-overflow: ellipsis; }
+
+.fwindow-warpper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  box-sizing: border-box; }
+  .fwindow-warpper .fwindow {
+    min-width: 50%;
+    max-width: 100%;
+    min-height: 50%;
+    max-height: 100%;
+    background: #fff;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 5px; }
+    .fwindow-warpper .fwindow .fwindow-header {
+      min-height: 20px;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      font-weight: bold;
+      font-size: 20px; }
+    .fwindow-warpper .fwindow .fwindow-body {
+      padding: 10px;
+      overflow-y: scroll;
+      box-sizing: border-box; }
+      .fwindow-warpper .fwindow .fwindow-body .fwindow-group {
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 20px; }
+        .fwindow-warpper .fwindow .fwindow-body .fwindow-group label {
+          width: 100%;
+          box-sizing: border-box;
+          padding-bottom: 8px;
+          font-size: 15px; }
+        .fwindow-warpper .fwindow .fwindow-body .fwindow-group .fwindow-control {
+          width: 100%;
+          box-sizing: border-box;
+          border: #ccc 1px solid;
+          font-size: 15px;
+          border-radius: 5px; }
+      .fwindow-warpper .fwindow .fwindow-body .fwindow-select-elm {
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+        cursor: pointer;
+        border-bottom: dashed 1px #ccc;
+        color: #000; }
+        .fwindow-warpper .fwindow .fwindow-body .fwindow-select-elm:hover {
+          background-color: #ccc; }
+    .fwindow-warpper .fwindow .fwindow-footer {
+      min-height: 20px;
+      width: 100%;
+      padding: 10px;
+      text-align: right;
+      box-sizing: border-box; }
+
+.fbuilder-new {
+  width: 100%;
+  min-height: 30px;
+  border: dashed 1px #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  color: #ccc;
+  text-decoration: none;
+  margin-top: 10px;
+  box-sizing: border-box; }
+  .fbuilder-new:hover {
+    border-color: #4d4d4d;
+    color: #4d4d4d; }
+
+.fbuilder-log {
+  width: 100%;
+  height: 300px;
+  overflow: hidden; }

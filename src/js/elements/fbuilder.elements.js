@@ -30,7 +30,7 @@ export class elements {
                     <i class="${this.element.icon}"></i> ${this.element.title}
                 </div>
                  <div class='body' >
-                        ${this.element.header}
+                        ${this.element.header?this.element.header:''}
                  </div>
         `;
     }

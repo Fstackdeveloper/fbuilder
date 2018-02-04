@@ -1,4 +1,6 @@
 import {fwindow} from './fwindow.js';
+import {uniqId} from '../fbuilder.functions.js';
+
 
 export class textWindow extends fwindow{
     
@@ -12,12 +14,12 @@ export class textWindow extends fwindow{
        var html=` 
                     <div class="fwindow-group">
                          <label for="header">Header</label>
-                         <input class="fwindow-control" type="text" name="header" value="${this.controls.header}" >
+                         <input class="fwindow-control" type="text" name="header" value="${this.controls.header?this.controls.header:''}" placeholder="${this.controls.header_placeholder}" >
                      </div>
         
                      <div class="fwindow-group">
                          <label for="header">Content</label>
-                        <textarea class="fwindow-control tinymce" name="content">${this.controls.content}</textarea>
+                        <textarea class="fwindow-control tinymce" id="tinymce_${uniqId()}" name="content" placeholder="${this.controls.content_placeholder}" >${this.controls.content?this.controls.content:''}</textarea>
                      </div>
         
         

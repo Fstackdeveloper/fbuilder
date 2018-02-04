@@ -125,6 +125,14 @@ export class fwindow {
             self.controls={};
             $(this).find('.fwindow-control').each(function () {
                 self.controls[$(this).attr("name")] = $(this).val();
+                
+                if($(this).hasClass('tinymce'))
+                {
+                    if(window.tinymce)
+                    {
+                         self.controls[$(this).attr("name")] = window.tinyMCE.get($(this).attr('id')).getContent();   
+                    }
+                }
             });
             self.submitCompelete(self.controls);
             self.windowElm.remove();
