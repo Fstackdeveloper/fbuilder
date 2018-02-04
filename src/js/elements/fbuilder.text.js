@@ -22,6 +22,7 @@ export class text extends elements{
         this.element.type="text";
         this.element.header="Edit Header";
         this.element.content="Edit Content";
+        this.element.showheader = "1";
         this.element.icon = text.icon;
         this.element.title = text.title;
 

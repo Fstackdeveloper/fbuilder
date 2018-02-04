@@ -7,47 +7,58 @@ app.use(bodyParser.json());
 
 
 
-function fcrousel()
+function input()
 {
-   let JsonObj = {};
+   let fcrousel = {};
    
-   JsonObj['types'] = 
+   fcrousel['types'] = 
              [       
               {id: 'photos', text: 'Photos'},
               {id: 'videos', text: 'Videos'},
-              {id: 'links', text: 'Links'}
+              {id: 'links', text: 'Links'},
+              {id: 'products', text: 'Products'},
+              {id: 'offers', text: 'Offers'}
              ];
     
-    JsonObj['links'] = 
+    fcrousel['links'] = 
             [
               {id: 1, text: 'link category 1'},
               {id: 2, text: 'link category 2'}
             ];
             
-    JsonObj['photos'] = 
+    fcrousel['photos'] = 
             [
               {id: 1, text: 'photo category 1'},
               {id: 2, text: 'photo category 2'}
             ];
             
-    JsonObj['videos'] = 
+    fcrousel['videos'] = 
             [
               {id: 1, text: 'video category 1'},
               {id: 2, text: 'video category 2'}
             ];
             
-    JsonObj['products'] = 
+    fcrousel['products'] = 
             [
               {id: 1, text: 'product category 1'},
               {id: 2, text: 'product category 2'}
             ];
             
-    JsonObj['offers'] = 
+    fcrousel['offers'] = 
             [
               {id: 1, text: 'offer category 1'},
               {id: 2, text: 'offer category 2'}
             ];
-
+            
+   let forms  = 
+            [
+              {id: 1, text: 'form 1'},
+              {id: 2, text: 'form 2'}
+            ];
+            
+    let JsonObj = {};
+    JsonObj['fcrousel'] = fcrousel;
+    JsonObj['forms'] = forms;
 
    return JSON.stringify(JsonObj);
 
@@ -100,7 +111,7 @@ app.use(function (req, res, next) {
 
 
 app.get('/', (req, res) => readJson(req, res));
-app.get('/fcrousel', (req, res) => res.send( fcrousel() ));
+app.get('/input', (req, res) => res.send( input() ));
 app.post('/save', (req, res) =>  writeInJson(req, res) );
 
 

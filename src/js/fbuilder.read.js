@@ -9,7 +9,7 @@ export class readJson {
           this.fbuilder = fbuilder;
           this.ajax = ajax;
           this.start();
-          
+          this.inputData();
         }
         
         
@@ -38,6 +38,20 @@ export class readJson {
                this.fbuilder.items[no] = instanse.element;
             }
             
+        }
+        
+        
+        inputData()
+        {
+          self =this;
+          this.ajax.get('/input')          
+          .then(function (response) {
+              self.fbuilder.input = response.data || [];
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+
         }
         
         

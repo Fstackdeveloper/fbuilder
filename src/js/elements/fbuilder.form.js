@@ -18,7 +18,7 @@ export class form extends elements{
     {
         this.element.type="form";
         this.element.header="Edit Header";
-        this.element.content="Edit Content";
+        this.element.showheader = "1";
         this.element.icon = form.icon;
         this.element.title = form.title;
     }

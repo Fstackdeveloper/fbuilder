@@ -9,6 +9,12 @@ export class formWindow extends fwindow{
     
     content()
     {
+        var self = this;
+        var formsSelect= '';
+        this.fbuilder.input.forms.map(function (form, i) { 
+            formsSelect += `<option value="${form.id}" ${(self.controls.form && self.controls.form.toString() === form.id.toString())?'selected':''}>${form.text}</option>`;
+        }) ;
+
        var html=` 
                     <div class="fwindow-group">
                          <label for="header">Header</label>
@@ -16,9 +22,19 @@ export class formWindow extends fwindow{
                      </div>
         
                      <div class="fwindow-group">
-                         <label for="header">Content</label>
-                        <textarea class="fwindow-control" name="content">${this.controls.content}</textarea>
+                         <label for="header">Type</label>
+                        <select class="fwindow-control" name="form">${formsSelect}</select>
                      </div>
+        
+        
+                      <div class="fwindow-group">
+                         <label for="header">Show Header</label>
+                        <select class="fwindow-control" name="showheader">
+                        <option value="1" ${(this.controls.showheader && this.controls.showheader.toString() === "1")?'selected':''}> yes </option>
+                        <option value="0" ${(this.controls.showheader && this.controls.showheader.toString() === "0")?'selected':''}> no </option>
+                        </select>
+                     </div>
+
 
 
                 `;
