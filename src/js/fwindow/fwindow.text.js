@@ -40,8 +40,7 @@ export class textWindow extends fwindow{
     events()
     {
         var self = this;
-        this.windowElm.find('textarea').froalaEditor();  
-        
+        $.getScript("https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1//js/froala_editor.pkgd.min.js", function () { self.windowElm.find('textarea').froalaEditor(); });
     }
     
     
