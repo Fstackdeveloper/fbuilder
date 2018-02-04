@@ -12,16 +12,10 @@ const extractSass = new ExtractTextPlugin({
 
 
 module.exports = {
-  entry: {'js/fcrousel.js': [
-      './src/js/fcrousel.js'
-    ],'css/fcrousel.css': [
-      './src/scss/fcrousel.scss'
-    ],'css/fcrousel.blue.css': [
-      './src/scss/blue.scss'
-    ],'css/fcrousel.blue.back.css': [
-      './src/scss/blue.back.scss'
-    ],'css/fcrousel.red.css': [
-      './src/scss/red.scss'
+  entry: {'js/fbuilder.js': [
+      './src/js/fbuilder.js'
+    ],'css/fbuilder.css': [
+      './src/scss/fbuilder.scss'
     ]
     },
   output: {
