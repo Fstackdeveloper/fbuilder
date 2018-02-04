@@ -17,7 +17,7 @@ export class textWindow extends fwindow{
         
                      <div class="fwindow-group">
                          <label for="header">Content</label>
-                        <textarea class="fwindow-control" name="content">${this.controls.content}</textarea>
+                        <textarea class="fwindow-control tinymce" name="content">${this.controls.content}</textarea>
                      </div>
         
         
@@ -40,7 +40,41 @@ export class textWindow extends fwindow{
     events()
     {
         var self = this;
-        $.getScript("https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1//js/froala_editor.pkgd.min.js", function () { self.windowElm.find('textarea').froalaEditor(); });
+                   
+           if(!window.tinymce)
+           {
+               $.getScript("https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.7.6/tinymce.min.js", function () { 
+                window.tinymce.init({
+                      selector: "textarea.tinymce",
+                      theme: 'modern',
+                      plugins: 'print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount  imagetools   contextmenu colorpicker textpattern help',
+                      toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+                      image_advtab: true,
+                      content_css: [
+                        'https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+                        'https://www.tinymce.com/css/codepen.min.css'
+                      ]
+                     });       
+
+               });
+            }
+            else
+            {
+                 window.tinymce.init({
+                  selector: "textarea.tinymce",
+                  theme: 'modern',
+                  plugins: 'print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount  imagetools   contextmenu colorpicker textpattern help',
+                  toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+                  image_advtab: true,
+                  content_css: [
+                    'https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+                    'https://www.tinymce.com/css/codepen.min.css'
+                  ]
+                 });       
+
+            }
+   
+
     }
     
     
