@@ -8,8 +8,8 @@ export class readJson {
         {
           this.fbuilder = fbuilder;
           this.ajax = ajax;
-          this.start();
           this.inputData();
+          this.start();
         }
         
         
@@ -18,7 +18,7 @@ export class readJson {
             self =this;
             if(this.fbuilder.data('auto') === true )
             {
-              this.ajax.get('/')          
+              this.ajax.get('')          
               .then(function (response) {
                   self.fbuilder.items = response.data || [];
                   self. build();
@@ -53,7 +53,7 @@ export class readJson {
         inputData()
         {
           self =this;
-          this.ajax.get('/input')          
+          this.ajax.get('input')          
           .then(function (response) {
               self.fbuilder.input = response.data || [];
           })
